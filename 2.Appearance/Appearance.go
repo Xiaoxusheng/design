@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+/*
+外观模式
+*/
+
 type Tv struct {
 }
 
