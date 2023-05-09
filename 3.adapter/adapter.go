@@ -19,9 +19,9 @@ func NewIphone(v V5) *Iphone {
 	return &Iphone{v: v}
 }
 
-func (v Iphone) charge() {
+func (I Iphone) charge() {
 	fmt.Println("phone开始充电")
-	v.v.UseV5()
+	I.v.UseV5()
 }
 
 type Use220v struct {
