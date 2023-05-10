@@ -40,25 +40,24 @@ func NewMoDecorator(h Phone) Phone {
 	return &MoDecorator{Decorator{h}}
 }
 
-type HoDecorator struct {
+type keDecorator struct {
 	Decorator
 }
 
-func (h *HoDecorator) show() {
+func (h *keDecorator) show() {
 	h.Phone.show()
 	fmt.Println("手机套壳了")
 }
 
-func NewHoDecorator(h Phone) Phone {
-	return &HoDecorator{Decorator{h}}
+func NewKeDecorator(h Phone) Phone {
+	return &keDecorator{Decorator{h}}
 }
 
 func main() {
-	var h Phone
-	h = &HuaWei{}
+	h := &HuaWei{}
 	h.show()
 
-	h1 := NewHoDecorator(h)
+	h1 := NewKeDecorator(h)
 	h1.show()
 
 	h2 := NewMoDecorator(h1)
