@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+/*
+命令模式
+*/
+
 type Docker struct{}
 
 func (d Docker) TreatEyes() {
@@ -12,7 +16,7 @@ func (d Docker) TreatNose() {
 	fmt.Println("治疗鼻子")
 }
 
-// 抽象的命令
+// Command 病历单
 type Command interface {
 	Treat()
 }

@@ -9,6 +9,7 @@ type Phone interface {
 	show()
 }
 
+// 装饰
 type Decorator struct {
 	Phone Phone
 }
